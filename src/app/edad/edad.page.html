@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <b>SABER SI ES ADULTO, JOVEN O ANCIANO</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-label color="danger">Ingresa el nombre de una persona</ion-label>
+  <div class="block">
+    <input type="text" [(ngModel)]="inputValue" #myInput />
+    <button type="button" (click)="onSubmit()">Enviar</button>
+  </div>
+
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label>Nombre: {{name}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Edad: {{age}}</ion-label>
+    </ion-item>
+
+    <div *ngIf="age<=18 && age !== null">
+      <h1>Es un joven</h1>
+      <img src="../../assets/img/joven.jpg" alt="" />
+    </div>
+
+    <div *ngIf="age<=55 && age !== null">
+      <h1>Es un Adulto</h1>
+
+      <img src="../../assets/img/adulto.jpg" alt="" />
+    </div>
+
+    <div *ngIf="age>=56 && age !== null">
+      <h1>Es un Anciano</h1>
+      <img src="../../assets/img/anciano.jpg" alt="" />
+    </div>
+  </ion-list>
+</ion-content>

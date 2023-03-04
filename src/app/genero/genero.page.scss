@@ -1,0 +1,35 @@
+ion-menu-button {
+    color: var(--ion-color-primary);
+}
+
+ion-item{
+  --background: rgb(96, 106, 248);
+  --background: linear-gradient(90deg, rgb(72, 97, 243) 20%, rgba(230, 43, 167, 0.328) 84%);
+  margin: 20px;
+
+}
+
+ ion-slides {
+  height: 100%;
+}
+
+
+.blue {
+  background-color: #0e66ff;
+  color: white;
+  font-size: 20px;
+}
+
+
+.pink {
+ background-color: #ee41ba;
+  color: white;
+    font-size: 20px;
+}
+
+button {
+  margin: 15px;
+  background-color: #eb445a;
+  padding: 9px;
+  border-radius: 6px;
+}

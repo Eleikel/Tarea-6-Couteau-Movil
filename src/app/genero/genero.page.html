@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <b>Predecir Genero</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Genero</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-label color="danger">Ingresa el nombre de una persona</ion-label>
+      <div class="block">
+        <input type="text" [(ngModel)]="inputValue" #myInput />
+        <button type="button" (click)="onSubmit()">Enviar</button>
+      </div>
+
+      <ion-list lines="full">
+        <ion-item>
+          <ion-label>Nombre: {{name}}</ion-label>
+        </ion-item>
+        <div *ngIf="gender==='male'">
+          <h4 class="blue">Genero: {{gender}}</h4>
+        </div>
+
+        <div *ngIf="gender==='female'">
+          <h4 class="pink">Genero: {{gender}}</h4>
+        </div>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

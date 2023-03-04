@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <b>UNIVERSIDADES</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label color="danger">Ingresa el nombre de un Pais en ingles</ion-label>
+  <div class="block">
+    <input type="text" [(ngModel)]="inputValue" #myInput />
+    <button type="button" (click)="onSubmit()">Enviar</button>
+  </div>
+
+  <ion-list lines="full">
+    <ion-item *ngFor="let item of getdata">
+      <ion-label>Universidad: {{item.name}}</ion-label>
+      <ion-label>Dominio: {{item.domains}}</ion-label>
+      <ion-label> Pagina Web: {{item.web_pages}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

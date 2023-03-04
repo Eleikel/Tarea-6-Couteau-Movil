@@ -1,0 +1,27 @@
+ion-menu-button {
+    color: var(--ion-color-primary);
+}
+
+
+ion-content{
+    background-repeat:no-repeat;
+    background: size cover;
+}
+
+.photo{
+  display: flex;
+  justify-content: center;
+}
+
+img{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border-style: groove;
+}
+
+
+ion-card-header{
+  display: flex;
+  justify-content: center;
+}
